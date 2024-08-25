@@ -47,19 +47,19 @@ To run this project, you will need the following Python libraries:
 
     `pip install pyspark findspark`
 
-2.  Configure and initialize Spark:
+## 2. Configure and initialize Spark:
 
-    python
+    ```python
+import findspark
+findspark.init()
 
-    `import findspark
-    findspark.init()
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SparkSession
 
-    from pyspark import SparkConf, SparkContext
-    from pyspark.sql import SparkSession
+conf = SparkConf().setAppName("Market Basket Analysis").setMaster('local')
+sc = SparkContext(conf=conf)
+spark = SparkSession(sc)
 
-    conf = SparkConf().setAppName("Market Basket Analysis").setMaster('local')
-    sc = SparkContext(conf=conf)
-    spark = SparkSession(sc)`
 
 3.  Open the `pySpark_apriori.ipynb` notebook to start the project.
 
@@ -86,5 +86,7 @@ How It Works
 
 Output
 ------
+
+![Market Basket Analysis Output](https://github.com/NikkaLuna/PySpark_Market_Basket_Analysis_for_Grocery_Data_Mining/blob/main/Output.png)
 
 The final output is a list of frequent item pairs that exceed the specified support count, indicating that they are frequently bought together. These pairs can then be used to optimize the placement of items in the store to increase cross-selling opportunities.
