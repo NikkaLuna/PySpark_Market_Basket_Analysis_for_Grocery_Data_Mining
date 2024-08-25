@@ -43,10 +43,9 @@ To run this project, you will need the following Python libraries:
 
 1.  Install the required Python libraries using pip:
 
-    bash
+    ```bash
 
     `pip install pyspark findspark`
-
 
 ## 2. Configure and initialize Spark:
 
@@ -88,6 +87,6 @@ How It Works
 Output
 ------
 
-![Market Basket Analysis Output](https://github.com/NikkaLuna/PySpark_Market_Basket_Analysis_for_Grocery_Data_Mining/blob/main/Output.png)
+![Market Basket Analysis Output](https://github.com/NikkaLuna/PySpark_Market_Basket_Analysis_for_Grocery_Data_Mining/blob/main/PySparkOutput.png)
 
 The final output is a list of frequent item pairs that exceed the specified support count, indicating that they are frequently bought together. These pairs can then be used to optimize the placement of items in the store to increase cross-selling opportunities.
