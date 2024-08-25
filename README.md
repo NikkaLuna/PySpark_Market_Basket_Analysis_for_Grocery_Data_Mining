@@ -47,9 +47,10 @@ To run this project, you will need the following Python libraries:
 
     `pip install pyspark findspark`
 
+
 ## 2. Configure and initialize Spark:
 
-    ```python
+```python
 import findspark
 findspark.init()
 
@@ -59,7 +60,7 @@ from pyspark.sql import SparkSession
 conf = SparkConf().setAppName("Market Basket Analysis").setMaster('local')
 sc = SparkContext(conf=conf)
 spark = SparkSession(sc)
-
+```
 
 3.  Open the `pySpark_apriori.ipynb` notebook to start the project.
 
