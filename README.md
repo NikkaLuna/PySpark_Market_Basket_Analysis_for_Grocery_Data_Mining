@@ -12,6 +12,7 @@ The project is divided into two main components:
     -   The dataset is partitioned and sent to the worker nodes of the compute cluster.
     -   A Python function generates potential pairs from each partition.
     -   The potential pairs are filtered based on specified conditions.
+      
 2.  **Filtering at the Master Node:**
     -   The filtered potential pairs from the worker nodes are aggregated at the master node.
     -   Additional filtering is performed to retain only those item pairs that exceed a specified count using PySpark.
@@ -21,6 +22,7 @@ Project Structure
 
 -   **Jupyter Notebook (`pySpark_apriori.ipynb`)**: This notebook contains the complete implementation of the Apriori algorithm, with cells corresponding to each step in the process.
 -   **Python Functions**:
+  
     -   `pre_check()`: Combines frequent itemsets of size k-1 to generate k-sized combinations.
     -   `post_check()`: Filters out combinations where all subsets are not present in the frequent itemsets from the previous step.
     -   `count_check()`: Filters out combinations with occurrence counts less than the support count.
@@ -43,15 +45,11 @@ To run this project, you will need the following Python libraries:
 
     bash
 
-    Copy code
-
     `pip install pyspark findspark`
 
 2.  Configure and initialize Spark:
 
     python
-
-    Copy code
 
     `import findspark
     findspark.init()
